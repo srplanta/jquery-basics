@@ -160,15 +160,37 @@ $(document).ready(function () {
     //     $("#coords").html(`X&Y Coords: (${e.clientX}, ${e.clientY})`);
     // });
 
-    $("input").focus(function () {
-        $(this).css({ "background-color": "gray" });
+    // $("input").focus(function () {
+    //     $(this).css({ "background-color": "gray" });
+    // });
+
+    // $("input").blur(function () {
+    //     $(this).css({ "background-color": "white" });
+    // });
+
+    // $("input").keyup(function (e) {
+    //     $("#display").html(e.target.value);
+    // });
+
+    //get the value on select value changed
+    // $("select#gender").change(function () {
+    //     // $(alert());
+    //     $("label#display").html($("select#gender :selected").val());
+    // });
+
+    //another way to get the value on select value changed
+    // $("select#gender").change(function (e) {
+    //     $("label#display").html(e.target.value);
+    // });
+    // -----------------------------------------------------
+
+    $("#reg_form").submit(function (e) {
+        e.preventDefault();
+
+        $("label#display").html($("#name").val());
     });
 
-    $("input").blur(function () {
-        $(this).css({ "background-color": "white" });
-    });
-
-    $("input").keyup(function (e) {
-        $("#display").html(e.target.value);
-    });
+    // $("#btn_show_hide").click(function(){
+    //     $("label#display").html($("#name").val());
+    // });
 })
